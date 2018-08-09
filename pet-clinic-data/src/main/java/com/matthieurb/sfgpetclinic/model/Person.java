@@ -1,6 +1,6 @@
 package com.matthieurb.sfgpetclinic.model;
 
-public class Person {
+public class Person extends BaseEntity {
 	
 	private String prenom;
 	private String nom;
