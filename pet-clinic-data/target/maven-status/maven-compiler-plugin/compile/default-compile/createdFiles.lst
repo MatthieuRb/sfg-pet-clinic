@@ -1,0 +1,5 @@
+com\matthieurb\sfgpetclinic\model\Pet.class
+com\matthieurb\sfgpetclinic\model\Owner.class
+com\matthieurb\sfgpetclinic\model\Person.class
+com\matthieurb\sfgpetclinic\model\PetType.class
+com\matthieurb\sfgpetclinic\model\Vet.class
