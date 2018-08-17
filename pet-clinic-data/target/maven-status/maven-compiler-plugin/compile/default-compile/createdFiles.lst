@@ -1,5 +1,14 @@
-com\matthieurb\sfgpetclinic\model\Pet.class
-com\matthieurb\sfgpetclinic\model\Owner.class
-com\matthieurb\sfgpetclinic\model\Person.class
+com\matthieurb\sfgpetclinic\model\BaseEntity.class
+com\matthieurb\sfgpetclinic\services\map\AbstractMapService.class
 com\matthieurb\sfgpetclinic\model\PetType.class
+com\matthieurb\sfgpetclinic\services\map\PetServiceMap.class
+com\matthieurb\sfgpetclinic\model\Pet.class
 com\matthieurb\sfgpetclinic\model\Vet.class
+com\matthieurb\sfgpetclinic\services\map\OwnerServiceMap.class
+com\matthieurb\sfgpetclinic\services\CrudService.class
+com\matthieurb\sfgpetclinic\services\map\VetServiceMap.class
+com\matthieurb\sfgpetclinic\model\Person.class
+com\matthieurb\sfgpetclinic\services\PetService.class
+com\matthieurb\sfgpetclinic\services\VetService.class
+com\matthieurb\sfgpetclinic\model\Owner.class
+com\matthieurb\sfgpetclinic\services\OwnerService.class
