@@ -1,6 +1,5 @@
 package com.matthieurb.sfgpetclinic.bootstrap;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -8,8 +7,6 @@ import com.matthieurb.sfgpetclinic.model.Owner;
 import com.matthieurb.sfgpetclinic.model.Vet;
 import com.matthieurb.sfgpetclinic.services.OwnerService;
 import com.matthieurb.sfgpetclinic.services.VetService;
-import com.matthieurb.sfgpetclinic.services.map.OwnerServiceMap;
-import com.matthieurb.sfgpetclinic.services.map.VetServiceMap;
 
 @Component
 public class DataLoader implements CommandLineRunner {
