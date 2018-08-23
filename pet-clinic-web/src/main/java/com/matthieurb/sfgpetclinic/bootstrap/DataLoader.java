@@ -10,11 +10,13 @@ import com.matthieurb.sfgpetclinic.model.Pet;
 import com.matthieurb.sfgpetclinic.model.PetType;
 import com.matthieurb.sfgpetclinic.model.Specialty;
 import com.matthieurb.sfgpetclinic.model.Vet;
+import com.matthieurb.sfgpetclinic.model.Visit;
 import com.matthieurb.sfgpetclinic.services.OwnerService;
 import com.matthieurb.sfgpetclinic.services.PetService;
 import com.matthieurb.sfgpetclinic.services.PetTypeService;
 import com.matthieurb.sfgpetclinic.services.SpecialtiesService;
 import com.matthieurb.sfgpetclinic.services.VetService;
+import com.matthieurb.sfgpetclinic.services.VisitService;
 
 @Component
 public class DataLoader implements CommandLineRunner {
@@ -23,16 +25,16 @@ public class DataLoader implements CommandLineRunner {
 	private final VetService vetService;
 	private final PetTypeService petTypeService;
 	private final SpecialtiesService specialtiesService;
+	private final VisitService visitService;
 
-	
-	public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialtiesService specialtiesService) {
+	public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService,
+			SpecialtiesService specialtiesService, VisitService visitService) {
 		this.ownerService = ownerService;
 		this.vetService = vetService;
 		this.petTypeService = petTypeService;
 		this.specialtiesService = specialtiesService;
+		this.visitService = visitService;
 	}
-
-
 
 	@Override
 	public void run(String... args) throws Exception {
@@ -83,6 +85,12 @@ public class DataLoader implements CommandLineRunner {
 		owner2.getPets().add(jeansPet);
 		
 		ownerService.save(owner2);
+		
+		Visit catVisit = new Visit();
+		catVisit.setPet(jeansPet);
+		catVisit.setDate(LocalDate.now());
+		catVisit.setDescription("Visite du chat");
+		visitService.save(catVisit);
 		
 		System.out.println("Loeaded Owners ...");
 		
